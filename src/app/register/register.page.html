@@ -1,0 +1,29 @@
+<ion-header>
+
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="title">
+    <h4>Signup</h4>
+    <p>Register with Code Crafts to get started</p>
+  </div>
+
+  <ion-input placeholder="Username" [(ngModel)]="name" class="primary-input"></ion-input>
+  <ion-input placeholder="E-mail" [(ngModel)]="mail" class="primary-input"></ion-input>
+  <ion-input placeholder="Phone" [(ngModel)]="phone" class="primary-input"></ion-input>
+  <ion-select [(ngModel)]="userType" interface="popover" placeholder="Choise User Type">
+    <ion-select-option value="owner">Owner</ion-select-option>
+    <ion-select-option value="renter">Renter</ion-select-option>
+  </ion-select>
+  <ion-input placeholder="Password" [(ngModel)]="password" type="password" class="primary-input"></ion-input>
+
+  <p *ngIf="errorMsg" style="color: red;">you already have an account</p>
+
+  <div class="ion-margin-top">
+    <ion-button expand="block" (click)="register()">SIGN UP</ion-button>
+  </div>
+
+  <div class="ion-margin-top ion-text-center">
+    <a (click)="dismiss()">Close</a>
+  </div>
+</ion-content>

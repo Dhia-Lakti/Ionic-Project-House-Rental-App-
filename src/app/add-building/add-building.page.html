@@ -1,0 +1,35 @@
+<ion-header>
+
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="title">
+    <h4>Add Building</h4>
+  </div>
+
+  <ion-input placeholder="Building Type" [(ngModel)]="buildingType" class="primary-input"></ion-input>
+  <ion-select [(ngModel)]="location" interface="popover" placeholder="Choise location">
+          <ion-select-option value="Tunis">Tunis</ion-select-option>
+          <ion-select-option value="Ariana">Ariana</ion-select-option>
+          <ion-select-option value="Nabeul">Nabeul</ion-select-option>
+          <ion-select-option value="Sousse">Sousse</ion-select-option>
+          <ion-select-option value="Monastir">Monastir</ion-select-option>
+          <ion-select-option value="Sfax">Sfax</ion-select-option>
+  </ion-select>
+  <ion-input placeholder="Price" [(ngModel)]="price" class="primary-input"></ion-input>
+  <ion-input placeholder="Description" [(ngModel)]="description" type="text" class="primary-input"></ion-input>
+  <ion-button fill="outline" color="medium" (click)="getImage()">
+    choise an image
+    <ion-icon slot="end" name="images-outline"></ion-icon>
+  </ion-button>
+
+  <p style="margin-top: 10px;"></p>
+
+  <div class="ion-margin-top">
+    <ion-button (click)="addArticle()" expand="block">Add</ion-button>
+  </div>
+
+  <div class="ion-margin-top ion-text-center">
+    <a (click)="dismiss()">Close</a>
+  </div>
+</ion-content>
